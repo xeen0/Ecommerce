@@ -2,11 +2,16 @@
   "name": "ecommerce",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node":"12.10.0",
+    "npm":"6.10.3"
+  },
   "dependencies": {
     "firebase": "^7.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-redux": "^7.1.1",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.1.2",
     "react-stripe-checkout": "^2.6.3",
     "redux": "^4.0.4",
