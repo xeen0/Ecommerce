@@ -1,0 +1,6 @@
+export const  cartActionType = {
+    TOGGLE_CART_HIDDEN :'TOGGLE_CART_HIDDEN ',
+    ADD_ITEMS :'ADD_ITEMS',
+    REMOVE_ITEM:'REMOVE_ITEM',
+    DELETE_ITEM:'DELETE_ITEM'
+}
