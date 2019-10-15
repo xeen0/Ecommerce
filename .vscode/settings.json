@@ -1,0 +1,5 @@
+{
+    "editor.fontFamily": "Operator Mono Lig ,Consolas, 'Courier New', monospace",
+    "workbench.colorTheme": "Snazzy Operator",
+    "editor.fontLigatures": true
+}
