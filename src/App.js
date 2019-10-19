@@ -7,7 +7,7 @@ import SigninSignup from "./pages/signin-signup/signin-signup.component";
 
 import {
   auth,
-  createUserProfileDocument
+  createUserProfileDocument,
 } from "../src/firebase/firebase.utils";
 
 import { Switch, Route, Redirect } from "react-router-dom";
@@ -23,7 +23,7 @@ import CheckoutPage from "./pages/checkout/checkout.component";
 class App extends React.Component {
   unSubscribeFromAuth = null;
   componentDidMount() {
-    const { setCurrentUser } = this.props;
+    const { setCurrentUser  } = this.props;
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
@@ -36,6 +36,9 @@ class App extends React.Component {
       }
 
       setCurrentUser(userAuth);
+
+
+      
     });
   }
   componentWillUnmount() {
@@ -64,7 +67,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 });
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
